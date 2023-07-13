@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>creating cv form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script>
+    function duplicateDiv() {
+  var originalDiv = document.getElementById("originalDiv");
+  var clonedDiv = originalDiv.cloneNode(true);
+  
+  // Clear input values in cloned div
+  var clonedInputs = clonedDiv.getElementsByTagName("input");
+  for (var i = 0; i < clonedInputs.length; i++) {
+    clonedInputs[i].value = "";
+  }
+
+  
+  
+  document.getElementById("divContainer").appendChild(clonedDiv);
+}
+
+   function duplDiv() {
+      var orgDiv = document.getElementById("orgDiv");
+      var clonedDiv = orgDiv.cloneNode(true);
+
+      var clonedInputs = clonedDiv.getElementsByTagName("input");
+  for (var i = 0; i < clonedInputs.length; i++) {
+    clonedInputs[i].value = "";
+ }
+      document.getElementById("divCont").appendChild(clonedDiv);
+   }
+
+    function dupDiv() {
+      var original = document.getElementById("original");
+      var clonedDiv = original.cloneNode(true);
+
+      var clonedInputs = clonedDiv.getElementsByTagName("input");
+  for (var i = 0; i < clonedInputs.length; i++) {
+    clonedInputs[i].value = "";
+  }
+      document.getElementById("container").appendChild(clonedDiv);
+    }
+
+    // document.getElementById("myForm").addEventListener("submit", function(event) {
+    //   event.preventDefault(); // Prevent form submission
+      function showData(){
+      // Get the input values
+      var name = document.getElementById("name").value;
+      var dob = document.getElementById("dob").value;
+      // let skill = document.getElementById("skill").value;
+
+      // Display the values in an alert
+      alert("Name: " + name + "\nDate of birth: " + dob);
+      // alert(skill);
+      } 
+    // });
+
+  </script>
+  <body>
+    <h1>CEREATE RESUME</h1>
+    <form id="myForm">
+    <div class="info">
+      <div class="box">
+        <h2>Personal Information</h2>
+        <div class="image">
+          
+            <!-- Input button to choose an image -->
+            <input type="file" accept="image/*" id="imageInput" style="display: none;">
+            
+            <!-- Button to trigger the image selection -->
+            <button type="button" onclick="document.getElementById('imageInput').click()" title="upload your passport size image with png or jpg extension">Select Image</button>
+            
+            <!-- Display the selected image -->
+            <img id="previewImage" style="display: none;">
+        </div>
+      </div>
+      <div class="box">
+        <span>
+          <label for="name">Name:</label><br/>
+          <input type="text" name="name" id="name">
+        </span>
+        <span>
+          <label for="Date of Birth">Date of Birth:</label><br/>
+          <input type="date" name="dob" id="dob">
+        </span>
+      </div>
+      <div class="box">
+        <span>
+          <label for="cnic">CNIC:</label><br/>
+          <input type="text" placeholder="xxxxx-xxxxxxx-x">
+        </span>
+        <span>
+          <label for="Email">Email:</label><br/>
+          <input type="email">
+        </span>
+      </div>
+      <div class="box">
+        <span>
+          <label for="pnone no">Phone No:</label><br/>
+          <input type="number">
+        </span>
+        <span>
+          <label for="address">Address:</label><br/>
+          <input type="text">
+        </span>
+      </div>
+    </div>
+      <div class="Educational_info">
+        <h2 class="heading">Educational Information</h2>
+        <div id="divContainer">
+          <div id="originalDiv">
+            <div class="box">
+              <span>
+                <input type="text" placeholder="Degree Name">
+              </span>
+              <span>
+                <input type="text" placeholder="Institution name">
+              </span>
+            </div>
+            <div class="box">
+              <span>
+                <input type="text" placeholder="Year degree completed">
+              </span>
+              <span>
+                <input type="text" placeholder="GPA">
+              </span>
+            </div>
+          </div>
+        </div>
+          <button class="btn" type="button" onclick="duplicateDiv()">Add More</button>
+      </div>
+    <div class="experience_info">
+      <h2 class="heading">Experience</h2>
+      <div id="divCont">
+        <div id="orgDiv">
+            <div class="box">
+              <span>
+                <label for="position">Position-Title:</label><br/>
+                <input type="text" name="">
+              </span>
+              <span>
+                <label for="organization">Organization:</label><br />
+                <input type="text" />
+              </span>
+            </div>
+            <div class="box">
+              <span>
+                <label for="startdate">Joined:</label><br />
+                <input type="date">
+              </span>
+              <span>
+                <label for="enddate">Resignation:</label><br />
+                <input type="date">
+              </span>
+            </div>
+      </div>
+    </div>
+      <button class="btn" type="button" onclick="duplDiv()">Add More</button>
+    </div>
+    <div class="skill_info">
+      <h2>Skills</h2>
+      <div id="container">
+        <div id="original">
+          <div class="box">
+            <input type="text" class="skill">
+          </div>
+        </div>
+    </div>
+      <button class="btn" type="button" onclick=" dupDiv()">Add More</button>
+    </div>
+      <button class="btn" type="submit" onclick="showData()">Submit</button>
+    </form>
+  </body>
+</html>

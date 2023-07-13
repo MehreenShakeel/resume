@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: #eee; */
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+  height: 45px;
+  margin-top: 20px;
+}
+.info {
+  margin: 12px;
+  width: 50%;
+  /* height: px; */
+  /* text-align: center; */
+  margin-left: 25%;
+  margin-bottom: 18px;
+ 
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center;     */
+  margin-bottom: 18px;
+}
+input {
+  width: 400px;
+  height: 40px;
+  margin-top: 10px;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+
+  /* Customize the font */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+
+  /* Customize the button color */
+  background-color: rgb(133, 133, 238);
+  color: black;
+
+  /* Add hover and focus styles */
+  cursor: pointer;
+}
+.heading {
+  margin-bottom: 16px;
+}
+.Educational_info {
+  margin: 12px;
+  width: 50%;
+  /* height: 160px; */
+  /* text-align: center; */
+  margin-left: 25%;
+  margin-bottom: 15px;
+}
+.experience_info {
+  margin: 12px;
+  width: 50%;
+  /* height: 190px; */
+  /* text-align: center; */
+  margin-left: 25%;
+  margin-bottom: 25px;
+}
+.skill_info {
+  margin: 12px;
+  width: 50%;
+  /* height: 100px; */
+  /* text-align: center; */
+  margin-left: 25%;
+  /* margin-bottom: 15px; */
+}
+.skill{
+  height: 50px;
+  width: 920px;
+}
+h2{
+  padding-top: 35px;
+}
+.btn{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+
+  /* Customize the font */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  float: right;
+  margin-left: 20px;
+
+  /* Customize the button color */
+  background-color: rgb(133, 133, 238);
+  color: black;
+
+  /* Add hover and focus styles */
+  cursor: pointer;
+}
